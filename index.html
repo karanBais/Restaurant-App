@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant App</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Restaurant Orders</h2>
+    <form id="orderForm">
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required><br><br>
+        <label for="dishName">Dish Name:</label>
+        <input type="text" id="dishName" name="dishName" required><br><br>
+        <label for="tableNumber">Table Number:</label>
+        <select id="tableNumber" name="tableNumber">
+            <option value="1">Table 1</option>
+            <option value="2">Table 2</option>
+            <option value="3">Table 3</option>
+            <option value="4">Table 4</option>
+        </select><br><br>
+        <button type="button" onclick="addOrder()">Place Order</button>
+    </form>
+
+    <h3>Orders</h3>
+    <table id="ordersTable">
+        <tr>
+            <th>Table Number</th>
+            <th>Dish Name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </table>
+
+    <script src="script.js">  </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
